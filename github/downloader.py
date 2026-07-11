@@ -25,7 +25,10 @@ def download(path: str):
     )
 
     response = requests.get(
-        url
+        url,
+        headers={
+            "Accept-Encoding": "gzip"
+        }
     )
 
     response.raise_for_status()
