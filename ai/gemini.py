@@ -11,7 +11,6 @@ genai.configure(
 )
 
 
-
 def ask_gemini(
     system_prompt,
     user_prompt
