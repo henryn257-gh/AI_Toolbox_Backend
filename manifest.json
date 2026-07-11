@@ -1,27 +1,11 @@
 {
-    "content_version": 1,
+    "content_version":1,
 
-    "fonts": {
-        "default": [
-            "bold",
-            "italic",
-            "bubble",
-            "gothic",
-            "symbols"
+    "fonts":{
+        "default":[
+            "bold"
         ],
 
-        "custom": []
-    },
-
-    "prompts": {
-        "builtin": [
-            "general",
-            "rewrite",
-            "coding",
-            "font_creator",
-            "screenshot"
-        ],
-
-        "custom": []
+        "custom":[]
     }
 }
