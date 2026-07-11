@@ -8,7 +8,9 @@ from ai.router import (
     ask_ai
 )
 
+from fastapi.responses import Response
 
+from github.downloader import download
 
 app = FastAPI(
     title="AI Toolbox Backend",
@@ -60,20 +62,14 @@ async def ai_endpoint(
 
 @app.get("/download")
 async def download_endpoint(
-    type: str,
-    name: str
+    path: str
 ):
 
+    data = download(
+        path
+    )
 
-    return {
-
-        "success": True,
-
-        "message":
-        "Download system ready",
-
-        "type": type,
-
-        "name": name
-
-    }
+    return Response(
+        content=data,
+        media_type="application/json"
+    )
