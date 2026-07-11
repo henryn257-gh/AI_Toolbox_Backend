@@ -1,4 +1,4 @@
-import google.generativeai as genai
+from google import genai
 
 from config.settings import (
     GEMINI_API_KEY,
@@ -6,7 +6,7 @@ from config.settings import (
 )
 
 
-genai.configure(
+client = genai.Client(
     api_key=GEMINI_API_KEY
 )
 
@@ -16,14 +16,14 @@ def ask_gemini(
     user_prompt
 ):
 
-    model = genai.GenerativeModel(
-        DEFAULT_MODEL,
-        system_instruction=system_prompt
-    )
+    response = client.models.generate_content(
+        model=DEFAULT_MODEL,
 
+        contents=user_prompt,
 
-    response = model.generate_content(
-        user_prompt
+        config={
+            "system_instruction": system_prompt
+        }
     )
 
 
