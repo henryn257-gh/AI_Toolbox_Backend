@@ -71,5 +71,5 @@ async def download_endpoint(
 
     return Response(
         content=data,
-        media_type="application/json"
+        media_type="application/json; charset=utf-8"
     )
