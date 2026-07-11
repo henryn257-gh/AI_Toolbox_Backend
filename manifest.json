@@ -1,14 +1,27 @@
 {
-    "fonts":[
-        "bold",
-        "italic",
-        "bubble",
-        "gothic"
-    ],
+    "content_version": 1,
 
-    "prompts":[
-        "general",
-        "rewrite",
-        "font_creator"
-    ]
+    "fonts": {
+        "default": [
+            "bold",
+            "italic",
+            "bubble",
+            "gothic",
+            "symbols"
+        ],
+
+        "custom": []
+    },
+
+    "prompts": {
+        "builtin": [
+            "general",
+            "rewrite",
+            "coding",
+            "font_creator",
+            "screenshot"
+        ],
+
+        "custom": []
+    }
 }
